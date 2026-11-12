@@ -146,6 +146,11 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
 .leg{display:grid;gap:.3rem}
 .leg i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:.5rem;vertical-align:-2px}
 .pie{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+/* Laborfreigabe */
+.pass{background:var(--ok-soft);border:3px solid var(--ok);border-radius:var(--r);padding:1.2rem 1.3rem;margin-block:1rem}
+.pass h3{color:var(--ok);font-size:1.5rem;margin-bottom:.3rem}
+.pass .who{font-family:var(--f-display);font-weight:800;font-size:1.4rem}
+.fail{background:var(--bad-soft);border-radius:12px;padding:.8rem 1rem;margin-top:.8rem}
 /* Simulation */
 .sim .svgt{font-family:var(--f-body);font-size:13px;fill:var(--muted)}
 .sim .svgb{font-family:var(--f-display);font-weight:800;font-size:15px;fill:var(--ink)}
@@ -169,6 +174,7 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
       <a href="#sicherheit">2 Sicherheit</a>
       <a href="#steck">3 Steckbriefe</a>
       <a href="#werk">4 Werkzeuge</a>
+      <a href="#freigabe">Freigabe</a>
       <a href="#tipps">Tipps</a>
       <a href="#aufl">5 Auflösung</a>
       <a href="#luft">6 Luft</a>
@@ -182,7 +188,7 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
   <section class="hero" id="start">
     <div>
       <h1>Blackbox Gas</h1>
-      <p class="lead">Drei farblose Gase, drei Reagenzgläser. Du kannst nicht hineinsehen. Finde mit Hypothesen und Versuchen heraus, was drin ist, und nimm dir danach die Luft vor.</p>
+      <p class="lead">Drei farblose Gase in drei Beuteln. Du kannst nicht sehen, welches Gas wo steckt. Finde mit Hypothesen und Versuchen heraus, was drin ist, und nimm dir danach die Luft vor.</p>
     </div>
     <svg viewBox="0 0 210 150" aria-hidden="true">
       <g fill="none" stroke="var(--glass)" stroke-width="3">
@@ -194,6 +200,7 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
   </section>
   <ul class="path">
     <li><a href="#auftrag"><b>Planen</b><span>Auftrag, Sicherheit, Steckbriefe, Werkzeuge</span></a></li>
+    <li><a href="#freigabe"><b>Laborfreigabe</b><span>Ohne sie gibt es kein Gas</span></a></li>
     <li><a href="#tipps"><b>Experimentieren</b><span>Tipps, wenn du nicht weiterkommst</span></a></li>
     <li><a href="#aufl"><b>Auflösen</b><span>Die drei Nachweise im Überblick</span></a></li>
     <li><a href="#luft"><b>Blackbox Luft</b><span>Mit digitalem Versuch zum Sauerstoffanteil</span></a></li>
@@ -202,16 +209,17 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
   <!-- ================= 1 AUFTRAG ================= -->
   <section class="block" id="auftrag">
     <header><span class="kapnr">1</span><h2>Dein Auftrag</h2></header>
-    <div class="frage"><small>Fragestellung</small><b>Welches Gas ist in welchem Reagenzglas?</b></div>
-    <p>Du weißt nur: In A, B und C sind <b>Sauerstoff</b>, <b>Wasserstoff</b> und <b>Kohlenstoffdioxid</b>. Die Reihenfolge kennst du nicht. Das ist wie bei den Blackboxen: Du kannst nicht hineinschauen, aber du kannst <b>Hypothesen aufstellen und überprüfen</b>, bis du genug Belege hast.</p>
-    <div class="warn"><b>Gas ist knapp.</b> Jedes Team bekommt nur <b>2 Proben pro Gas</b>. Jede Probe reicht für genau einen Test. Wer ohne Plan testet, steht am Ende ohne Gas da.</div>
+    <div class="frage"><small>Fragestellung</small><b>Welches Gas ist in welchem Beutel?</b></div>
+    <p>Du weißt nur: In den Gasbeuteln A, B und C sind <b>Sauerstoff</b>, <b>Wasserstoff</b> und <b>Kohlenstoffdioxid</b>. Die Reihenfolge kennst du nicht. Das ist wie bei den Blackboxen: Du kannst nicht hineinschauen, aber du kannst <b>Hypothesen aufstellen und überprüfen</b>, bis du genug Belege hast.</p>
+    <div class="warn"><b>Gas ist knapp.</b> Jedes Team bekommt <b>6 Gasmarken</b>: je 2 für A, B und C. Eine Marke ist eine Spritzenfüllung, und eine Füllung reicht für genau einen Test. Wer ohne Plan testet, steht am Ende ohne Gas da.</div>
     <div class="card">
       <h3>So gehst du vor</h3>
       <ol class="steps">
-        <li><div>Lies die <a href="#sicherheit">Sicherheitshinweise</a> und die <a href="#steck">Steckbriefe</a> der drei Gase.</div></li>
-        <li><div>Schau dir bei <a href="#werk">Werkzeuge</a> an, welche Tests du durchführen kannst.</div></li>
-        <li><div>Schreibe auf dein Arbeitsblatt zu jedem Gas eine Hypothese: „Wenn das Gas … ist, dann …“</div></li>
-        <li><div>Entscheide, mit welchem Test ihr beginnt, und lass den Plan <b>freigeben</b>.</div></li>
+        <li><div>Lies die <a href="#sicherheit">Sicherheitshinweise</a>, die <a href="#steck">Steckbriefe</a> und die <a href="#werk">Werkzeuge</a>.</div></li>
+        <li><div>Bestehe die <a href="#freigabe">Laborfreigabe</a> und speichere die grüne Karte als Screenshot im Heft.</div></li>
+        <li><div>Mache die <b>Trockenübung mit Luft</b> und zeige sie deiner Lehrkraft.</div></li>
+        <li><div>Schreibe auf dein Arbeitsblatt zu jedem Gas eine Hypothese: „Wenn das Gas … ist, dann …“ Entscheide, mit welchem Test ihr beginnt.</div></li>
+        <li><div>Lass den Plan <b>freigeben</b>. Dann bekommt ihr eure Gasmarken.</div></li>
         <li><div>Teste, beobachte genau und notiere alles. Ein Foto pro Test gehört ins Heft.</div></li>
       </ol>
       <div class="row-actions"><a class="btn primary" href="AB_Blackbox_Gas_und_Luft.pdf" target="_blank" rel="noopener">Arbeitsblatt öffnen (PDF)</a><span style="color:var(--muted)">Importiere es in dein digitales Heft.</span></div>
@@ -224,13 +232,13 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
     <div class="grid2">
       <div class="card gas-h2"><h3>Wasserstoff <span class="tag danger">Gefahr</span></h3>
         <p><b>Extrem entzündbares Gas.</b></p>
-        <ul><li>Fern von Flammen und Funken halten. Die Gasausgabe ist flammenfreie Zone.</li><li>Nur im Reagenzglas zünden, nie in größeren Gefäßen.</li><li>Die Öffnung zeigt beim Zünden von allen Personen weg.</li></ul></div>
+        <ul><li>Fern von Flammen und Funken halten. Die Gasstation ist flammenfreie Zone.</li><li>Nur im Reagenzglas zünden. <b>Nie eine Flamme an Spritze oder Beutel halten.</b></li><li>Die Öffnung zeigt beim Zünden von allen Personen weg.</li></ul></div>
       <div class="card gas-o2"><h3>Sauerstoff <span class="tag danger">Gefahr</span></h3>
         <p><b>Kann Brände verursachen oder verstärken.</b></p>
         <ul><li>Alles, was brennt, brennt in Sauerstoff viel heftiger.</li><li>Tisch frei räumen: kein Papier, keine Ärmel, keine Haare in der Nähe.</li><li>Lange Haare zusammenbinden.</li></ul></div>
       <div class="card gas-kw"><h3>Kalkwasser <span class="tag danger">Gefahr</span></h3>
         <p><b>Reizt die Haut und kann die Augen schwer schädigen.</b></p>
-        <ul><li>Schutzbrille tragen, die ganze Zeit.</li><li><b>Im Auge:</b> sofort mehrere Minuten mit Wasser spülen und die Lehrkraft rufen.</li><li>Auf der Haut: mit Wasser abwaschen.</li><li>Mit dem Strohhalm nur pusten, nie ansaugen.</li></ul></div>
+        <ul><li>Schutzbrille tragen, die ganze Zeit.</li><li><b>Im Auge:</b> sofort mehrere Minuten mit Wasser spülen und die Lehrkraft rufen.</li><li>Auf der Haut: mit Wasser abwaschen.</li><li>In die Spritze kommt nur Gas, <b>nie Kalkwasser</b>.</li><li>Mit dem Strohhalm nur pusten, nie ansaugen.</li></ul></div>
       <div class="card gas-co2"><h3>Kohlenstoffdioxid <span class="tag fine">kein Gefahrstoff</span></h3>
         <p>In den kleinen Mengen dieses Versuchs ungefährlich.</p>
         <ul><li>Trotzdem gilt: Schutzbrille bleibt auf.</li></ul></div>
@@ -254,16 +262,49 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
 
   <!-- ================= 4 WERKZEUGE ================= -->
   <section class="block" id="werk">
-    <header><span class="kapnr">4</span><h2>Deine Werkzeuge</h2><p>Diese drei Tests kannst du durchführen. Was dabei passiert, steht hier nicht. Das sagt dir deine Hypothese, und der Versuch zeigt, ob sie stimmt.</p></header>
+    <header><span class="kapnr">4</span><h2>Deine Werkzeuge</h2><p>So holst du Gas, und diese drei Tests kannst du durchführen. Was bei den Tests passiert, steht hier nicht. Das sagt dir deine Hypothese, und der Versuch zeigt, ob sie stimmt.</p></header>
+    <div class="card"><h3>Gas zapfen an der Gasstation</h3>
+      <ol>
+        <li>Spüle die Spritze einmal mit Luft: Kolben ganz herausziehen, ganz hineindrücken.</li>
+        <li>Gib eine Gasmarke ab und drehe die Spritze auf den Hahn des Beutels.</li>
+        <li>Öffne den Hahn und ziehe <b>langsam 50 mL</b> Gas auf.</li>
+        <li><b>Schließe den Hahn</b>, bevor du die Spritze abdrehst.</li>
+        <li>Halte die Spitze der Spritze mit dem Finger zu und gehe direkt an deinen Platz.</li>
+      </ol>
+      <p style="margin:0"><b>An der Gasstation brennt nie eine Flamme.</b></p></div>
     <div class="grid3">
       <div class="card"><h3>Test 1: Glimmender Span</h3>
-        <ol><li>Zünde den Holzspan an und lass ihn kurz brennen.</li><li>Puste die Flamme aus. Der Span soll nur noch glühen.</li><li>Ziehe den Stopfen und halte den glimmenden Span <b>sofort</b> in das Reagenzglas.</li></ol></div>
+        <ol><li>Person 1 zündet den Holzspan an und pustet die Flamme aus. Der Span soll nur noch glühen.</li><li>Person 2 stellt ein Reagenzglas aufrecht in den Ständer, hält die Spitze der Spritze in die Öffnung und drückt das Gas <b>zügig</b> hinein.</li><li>Sofort den <b>Daumen</b> auf die Öffnung.</li><li>Daumen weg, glimmenden Span sofort hineinhalten.</li></ol></div>
       <div class="card"><h3>Test 2: Brennender Span</h3>
-        <ol><li>Zünde den Holzspan an. Er soll mit Flamme brennen.</li><li>Halte das Reagenzglas waagrecht. Die Öffnung zeigt von allen Personen weg.</li><li>Ziehe den Stopfen und halte die Flamme <b>sofort</b> an die Öffnung.</li><li>Achte auf das, was du siehst <b>und hörst</b>.</li></ol></div>
+        <ol><li>Fülle das Reagenzglas wie bei Test 1 und verschließe es mit dem Daumen.</li><li>Person 1 hält einen <b>brennenden</b> Span bereit.</li><li>Halte das Glas schräg. Die Öffnung zeigt von allen Personen weg.</li><li>Daumen weg, Flamme sofort an die Öffnung.</li><li>Achte auf das, was du siehst <b>und hörst</b>.</li></ol></div>
       <div class="card"><h3>Test 3: Kalkwasser</h3>
-        <ol><li>Ziehe den Stopfen und gib etwa zwei Finger breit Kalkwasser in das Reagenzglas.</li><li>Verschließe das Glas <b>sofort</b> wieder mit dem Stopfen.</li><li>Schüttle kräftig und vergleiche mit frischem Kalkwasser.</li></ol></div>
+        <ol><li>Gib etwa zwei Finger breit Kalkwasser in ein Reagenzglas im Ständer.</li><li>Halte die Spitze der Spritze in die Öffnung, <b>nicht ins Kalkwasser</b>, und drücke das Gas hinein.</li><li>Verschließe das Glas sofort mit dem <b>Stopfen</b>, nicht mit dem Daumen.</li><li>Schüttle kräftig und vergleiche mit frischem Kalkwasser.</li></ol></div>
     </div>
-    <div class="warn"><b>Wichtig:</b> Der Stopfen bleibt drauf, bis der Test wirklich startet. Ein offenes Glas ist nach wenigen Sekunden eine verlorene Probe.</div>
+    <div class="merke"><h3>Trockenübung mit Luft</h3><p>Bevor du Gas bekommst, übst du die Handgriffe: Ziehe 50 mL <b>Luft</b> auf und führe damit Test 1 komplett durch. Notiere die Beobachtung auf Seite 2 deines Arbeitsblatts (V1) und zeige die Übung deiner Lehrkraft. So weißt du auch, wie sich ein glimmender Span in Luft verhält. Das ist dein Vergleich für die unbekannten Gase.</p></div>
+    <div class="warn"><b>Wichtig:</b> Zwischen Einspritzen und Test dürfen nur wenige Sekunden liegen. Sprecht vorher ab, wer was macht.</div>
+  </section>
+
+  <!-- ================= LABORFREIGABE ================= -->
+  <section class="block" id="freigabe">
+    <header><h2>Laborfreigabe</h2><p>Sieben Fragen zu Sicherheit und Durchführung. Du brauchst alle richtig. Bei einem Fehler liest du die Erklärung und beginnst von vorn, mit neuer Reihenfolge.</p></header>
+    <div class="card" id="lf">
+      <div id="lfRun">
+        <b id="lfProg">Frage 1 von 7</b><div class="bar"><i id="lfBar"></i></div>
+        <div class="qtext" id="lfQ"></div>
+        <div class="opts" id="lfOpts"></div>
+        <div class="fail" id="lfFail" hidden><p id="lfWhy"></p><button class="btn primary" type="button" id="lfRestart">Von vorn beginnen</button></div>
+      </div>
+      <div id="lfName" hidden>
+        <p><b>Alle sieben richtig.</b> Trage deinen Namen ein, dann erhältst du deine Freigabe.</p>
+        <div class="row-actions"><input type="text" id="lfWho" placeholder="Vorname Nachname" autocomplete="off" aria-label="Dein Name"><button class="btn primary" type="button" id="lfGo">Freigabe erstellen</button></div>
+      </div>
+      <div class="pass" id="lfPass" hidden>
+        <h3>Laborfreigabe erteilt</h3>
+        <div class="who" id="lfPassWho"></div>
+        <div id="lfPassWhen" style="color:var(--muted)"></div>
+        <p style="margin:.6rem 0 0">Mache einen Screenshot für dein Heft und zeige diese Karte deiner Lehrkraft. Als Nächstes: Trockenübung mit Luft.</p>
+      </div>
+    </div>
   </section>
 
   <!-- ================= TIPPS ================= -->
@@ -271,10 +312,10 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
     <header><h2>Tipps</h2><p>Erst selbst überlegen, dann aufklappen. Die Tipps helfen beim Denken, sie verraten keine Lösung.</p></header>
     <details class="tip"><summary>Mir fällt keine Hypothese ein</summary><div>Nimm einen Steckbrief und einen Test. Frage dich: „Was müsste bei diesem Test passieren, wenn genau dieses Gas im Glas ist?“ Beispiel für den Satzanfang: „Wenn das Gas Sauerstoff ist, dann müsste der glimmende Span …“</div></details>
     <details class="tip"><summary>Mit welchem Test fangen wir an?</summary><div>Ideal wäre ein Test, der bei allen drei Gasen etwas anderes zeigt. Prüfe mit den Steckbriefen, ob es so einen Test gibt. Wenn nicht: Welcher Test verrät dir wenigstens <b>ein</b> Gas eindeutig?</div></details>
-    <details class="tip"><summary>Unser Gas reicht nicht für alle Tests</summary><div>Du musst nicht jeden Test an allen drei Gläsern machen. Wenn du ein Gas schon sicher kennst, bleiben nur noch zwei Möglichkeiten für die beiden anderen Gläser. Überlege: An welchem Glas bringt der nächste Test die meiste neue Information?</div></details>
+    <details class="tip"><summary>Unser Gas reicht nicht für alle Tests</summary><div>Du musst nicht jeden Test mit allen drei Gasen machen. Wenn du ein Gas schon sicher kennst, bleiben nur noch zwei Möglichkeiten für die beiden anderen Beutel. Überlege: Bei welchem Gas bringt der nächste Test die meiste neue Information?</div></details>
     <details class="tip"><summary>Was ist der Unterschied zwischen Beobachtung und Deutung?</summary><div><b>Beobachtung:</b> Was du siehst oder hörst. „Der Span erlischt.“<br><b>Deutung:</b> Was du daraus schließt. „Das Gas fördert die Verbrennung nicht.“<br>Schreibe immer zuerst die Beobachtung auf.</div></details>
-    <details class="tip"><summary>Bei zwei Gläsern passiert das Gleiche</summary><div>Das ist ein echtes Ergebnis und kein Fehler. Dieser Test kann die beiden Gase nicht unterscheiden. Du brauchst einen zweiten Test, bei dem sich genau diese beiden Gase laut Steckbrief unterschiedlich verhalten.</div></details>
-    <details class="tip"><summary>Ein Versuch ist schiefgegangen</summary><div>Notiere trotzdem, was passiert ist, und überlege, woran es lag (Stopfen zu früh gezogen? Span nicht mehr geglüht?). Frage dann nach einer Ersatzprobe und begründe, wofür du sie brauchst.</div></details>
+    <details class="tip"><summary>Bei zwei Gasen passiert das Gleiche</summary><div>Das ist ein echtes Ergebnis und kein Fehler. Dieser Test kann die beiden Gase nicht unterscheiden. Du brauchst einen zweiten Test, bei dem sich genau diese beiden Gase laut Steckbrief unterschiedlich verhalten.</div></details>
+    <details class="tip"><summary>Ein Versuch ist schiefgegangen</summary><div>Notiere trotzdem, was passiert ist, und überlege, woran es lag (Zu lange zwischen Einspritzen und Test gewartet? Span nicht mehr geglüht?). Frage dann nach einer Joker-Marke und begründe, wofür du sie brauchst.</div></details>
   </section>
 
   <!-- ================= 5 AUFLÖSUNG ================= -->
@@ -306,8 +347,8 @@ footer{padding-block:2.5rem 3rem;color:var(--muted);font-size:.95rem}
     <div class="frage"><small>Fragestellung</small><b>Enthält Luft Sauerstoff und Kohlenstoffdioxid? Und wie viel?</b></div>
     <div class="card"><h3>Im Labor (Arbeitsblatt Seite 2)</h3>
       <ol class="steps">
-        <li><div><b>V1:</b> Halte einen glimmenden Span in ein Reagenzglas mit Luft.</div></li>
-        <li><div><b>V2:</b> Gib zwei Finger breit Kalkwasser in ein Reagenzglas mit Raumluft, verschließe es und schüttle.</div></li>
+        <li><div><b>V1:</b> Das war deine Trockenübung: glimmender Span in Luft. Schau dir deine Beobachtung noch einmal an.</div></li>
+        <li><div><b>V2:</b> Gib zwei Finger breit Kalkwasser in ein Reagenzglas mit Raumluft, verschließe es mit dem Stopfen und schüttle.</div></li>
         <li><div><b>V3:</b> Atme 30 Sekunden lang mit dem Strohhalm in frisches Kalkwasser aus. Schutzbrille auf, nur pusten!</div></li>
       </ol>
       <p style="margin:0;color:var(--muted)">Notiere vor jedem Versuch deine Hypothese.</p></div>
@@ -475,6 +516,52 @@ $("#codebtn").onclick=tryCode;
 $("#code").addEventListener("keydown",function(e){if(e.key==="Enter"){tryCode();}});
 try{if(sessionStorage.getItem("bbgas_open")==="1"){unlock();}}catch(e){}
 
+/* ---------- Laborfreigabe ---------- */
+(function(){
+  var LF=[
+   {q:"Wo darf eine Flamme brennen?",a:["Nur am eigenen Platz, nie an der Gasstation.","Überall, wenn man vorsichtig ist.","Direkt an der Gasstation, damit es schneller geht.","Nur am Lehrerpult."],e:"Wasserstoff ist extrem entzündbar. Die Gasstation ist deshalb flammenfreie Zone, gezündet wird nur am eigenen Platz."},
+   {q:"Dir spritzt Kalkwasser ins Auge. Was tust du?",a:["Sofort mehrere Minuten mit Wasser spülen und die Lehrkraft rufen.","Mit dem Ärmel abwischen und weiterarbeiten.","Die Augen fest zukneifen und abwarten.","Erst den Versuch zu Ende führen."],e:"Kalkwasser kann die Augen schwer schädigen. Jede Sekunde zählt: sofort lange spülen und die Lehrkraft rufen."},
+   {q:"Was darf in die Spritze?",a:["Nur Gas.","Gas und Kalkwasser.","Kalkwasser, damit man genau dosieren kann.","Alles, was durch die Öffnung passt."],e:"In die Spritze kommt nur Gas. Kalkwasser in einer Spritze kann herausspritzen und die Augen treffen."},
+   {q:"Woran darfst du ein Gas mit der Flamme testen?",a:["Nur an einem Reagenzglas.","An der Spitze der Spritze.","Direkt am Beutel.","An jedem Gefäß."],e:"Gezündet wird nur die kleine Gasmenge im Reagenzglas. Nie eine Flamme an Spritze oder Beutel halten."},
+   {q:"Wohin zeigt die Öffnung des Reagenzglases beim Test mit dem brennenden Span?",a:["Von allen Personen weg.","Zu mir, damit ich gut sehe.","Zu meiner Partnerin oder meinem Partner.","Das ist egal."],e:"Die Öffnung zeigt immer von allen Personen weg, auch von dir selbst."},
+   {q:"Du hast das Gas in das Reagenzglas gespritzt. Was machst du als Nächstes?",a:["Sofort den Daumen auf die Öffnung und gleich testen.","Das Glas offen stehen lassen, bis der Span glimmt.","Erst die Beobachtung aufschreiben.","Das Glas kräftig schütteln."],e:"Das Gas entweicht in wenigen Sekunden. Deshalb sofort Daumen drauf und gleich testen. Sprecht vorher ab, wer was macht."},
+   {q:"Womit verschließt du das Reagenzglas beim Kalkwasser-Test?",a:["Mit dem Stopfen.","Mit dem Daumen.","Gar nicht.","Mit der Spritze."],e:"Beim Kalkwasser-Test nimmst du den Stopfen. Kalkwasser reizt die Haut und gehört nicht an den Daumen."}
+  ];
+  var order,idx;
+  function start(){order=sh(LF);idx=0;$("#lfFail").hidden=true;show();}
+  function show(){
+    var it=order[idx];
+    $("#lfProg").textContent="Frage "+(idx+1)+" von "+LF.length;
+    $("#lfBar").style.width=(idx/LF.length*100)+"%";
+    $("#lfQ").textContent=it.q;
+    var box=$("#lfOpts");box.innerHTML="";
+    sh(it.a).forEach(function(t){
+      var b=document.createElement("button");b.type="button";b.className="opt";b.textContent=t;
+      b.onclick=function(){
+        if(t===it.a[0]){idx++;if(idx===LF.length){done();}else{show();}}
+        else{
+          $$(".opt",box).forEach(function(x){x.disabled=true;if(x.textContent===it.a[0]){x.classList.add("ok");}});
+          b.classList.add("bad");$("#lfWhy").textContent=it.e;$("#lfFail").hidden=false;
+        }
+      };
+      box.appendChild(b);
+    });
+  }
+  function done(){$("#lfRun").hidden=true;$("#lfName").hidden=false;$("#lfWho").focus();}
+  function pass(name,when){
+    $("#lfRun").hidden=true;$("#lfName").hidden=true;$("#lfPass").hidden=false;
+    $("#lfPassWho").textContent=name;$("#lfPassWhen").textContent=when;
+  }
+  $("#lfRestart").onclick=start;
+  $("#lfGo").onclick=function(){
+    var n=$("#lfWho").value.trim();if(n.length<3){$("#lfWho").className="bad";return;}
+    var d=new Date(),w="am "+d.toLocaleDateString("de-DE")+" um "+d.toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})+" Uhr";
+    pass(n,w);try{sessionStorage.setItem("bbgas_lf",JSON.stringify([n,w]));}catch(e){}
+  };
+  var saved=null;try{saved=JSON.parse(sessionStorage.getItem("bbgas_lf"));}catch(e){}
+  if(saved&&saved.length===2){pass(saved[0],saved[1]);}else{start();}
+})();
+
 /* ---------- Kreisdiagramm ---------- */
 (function(){
   var data=[[78,"#4F9BD9"],[21,"#B3245E"],[0.93,"#C98A00"],[0.07,"var(--ink)"]];
@@ -585,7 +672,7 @@ try{if(sessionStorage.getItem("bbgas_open")==="1"){unlock();}}catch(e){}
 /* ---------- Quiz ---------- */
 var Q=[
  {q:"Ein glimmender Holzspan flammt in einem Gas hell auf. Welches Gas ist es?",a:["Sauerstoff","Wasserstoff","Kohlenstoffdioxid","Stickstoff"],e:"Nur Sauerstoff fördert die Verbrennung so stark, dass ein glimmender Span wieder aufflammt (Glimmspanprobe)."},
- {q:"Du hältst einen brennenden Span an ein Reagenzglas und hörst ein Ploppen. Welches Gas war im Glas?",a:["Wasserstoff","Sauerstoff","Kohlenstoffdioxid","Luft"],e:"Wasserstoff ist brennbar und verbrennt im Gemisch mit Luft schlagartig (Knallgasprobe)."},
+ {q:"Du hältst einen brennenden Span an ein Reagenzglas mit Gas und hörst ein Ploppen. Welches Gas war im Glas?",a:["Wasserstoff","Sauerstoff","Kohlenstoffdioxid","Luft"],e:"Wasserstoff ist brennbar und verbrennt im Gemisch mit Luft schlagartig (Knallgasprobe)."},
  {q:"Ein Gas wird mit Kalkwasser geschüttelt. Das Kalkwasser wird weiß und trüb. Welches Gas ist es?",a:["Kohlenstoffdioxid","Sauerstoff","Wasserstoff","Argon"],e:"Kohlenstoffdioxid reagiert mit Kalkwasser zu einem weißen, unlöslichen Feststoff (Kalkwasserprobe)."},
  {q:"Ein glimmender Span erlischt in einem unbekannten Gas. Was weißt du jetzt sicher?",a:["Es ist kein reiner Sauerstoff.","Es ist Kohlenstoffdioxid.","Es ist Wasserstoff.","Im Glas war gar kein Gas."],e:"Der Span erlischt in mehreren Gasen. Sicher ist nur, was der Test ausschließt. Für mehr brauchst du einen zweiten Test."},
  {q:"Welches Gas hat den größten Anteil an der Luft?",a:["Stickstoff","Sauerstoff","Kohlenstoffdioxid","Wasserstoff"],e:"Luft besteht zu etwa 78 % aus Stickstoff und nur zu etwa 21 % aus Sauerstoff."},
